@@ -1,0 +1,18 @@
+﻿
+
+@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Use this area to provide additional information about User.</p>
+
+Is the User Logged in? @Request.IsAuthenticated<br />
+<h3> @User.Identity</h3><br /> 
+
+Is the User an Admin? @User.IsInRole("admin")<br />
+@User.Identity.AuthenticationType<br />
+
+@User.Identity.ToString();
+
