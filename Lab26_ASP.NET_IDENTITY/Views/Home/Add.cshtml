@@ -1,0 +1,22 @@
+﻿@using Lab26_ASP.NET_IDENTITY.Models;
+
+@{
+    ViewBag.Title = "Add";
+
+}
+
+<h2>Item Added</h2>
+
+Cart:
+<ul>
+
+    @foreach (MenuItems item in (List<MenuItems>)(Session["Cart"]))
+    {
+        
+        <li>Item #@item.ItemID @item.ItemName for $@item.Price</li>
+    }
+</ul>
+
+<br />
+<h2><a href="~/Home/MenuList">Back to List</a></h2>
+<br />

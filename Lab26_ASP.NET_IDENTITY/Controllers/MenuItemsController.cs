@@ -17,6 +17,7 @@ namespace Lab26_ASP.NET_IDENTITY.Controllers
         // GET: MenuItems
         public ActionResult Index()
         {
+
             return View(db.MenuItems.ToList());
         }
 
